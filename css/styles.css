@@ -27,7 +27,8 @@ body {
   --member-social-links-color: rgb(175, 177, 184);
   --footer-social-links-background-color: rgba(255, 255, 255, 10%);
   --newsletter-button-shadow-color: rgba(0, 0, 0, 15%);
-  --border-email-input-color: rgba(255, 255, 255, 30%)
+  --border-email-input-color: rgba(255, 255, 255, 30%);
+  --border-input-field-color: rgba(33, 33, 33, 20%);
 }
 
 .logo {
@@ -564,6 +565,7 @@ body {
 .email-input {
   width: 358px;
   height: 50px;
+  padding-left: 16px;
   box-sizing: border-box;
   border: 1px solid var(--border-email-input-color);
   border-radius: 4px;
@@ -572,6 +574,7 @@ body {
   letter-spacing: 0.03rem;
   color: var(--alternative-color-transparent);
   background-color: var(--background-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email-input:hover,
@@ -583,7 +586,6 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.06rem;
   line-height: 30px;
@@ -626,6 +628,8 @@ body {
 
 .order-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 528px;
   height: 581px;
   background-color: var(--alternative-color);
@@ -633,7 +637,6 @@ body {
   box-shadow: 0px 2px 1px 0px var(--member-card-shadow-color3),
     0px 1px 1px 0px var(--member-card-shadow-color2),
     0px 1px 3px 0px var(--member-card-shadow-color1);
-  justify-content: right;
 }
 
 .close-button {
@@ -647,7 +650,81 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 8px;
-  margin-right: 8px;
+  margin-left: 490px;
   color: var(--logo-color);
   background-color: var(--alternative-color);
+  cursor: pointer;
+}
+
+.order-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23.44px;
+  letter-spacing: 0.03rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.order-form-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01rem;
+  color: var(--contact-color);
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid var(--border-input-field-color);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+  position: fixed;
+  margin-left: 12px;
+}
+
+.field:focus-within {
+  fill: var(--active-link-color);
+}
+
+.input-field:focus {
+  border-color: var(--active-link-color);
+
+}
+
+textarea {
+  resize: none;
+  outline: none;
+}
+
+.order-form-button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--active-link-color);
+  color: var(--alternative-color);
+  border: 0;
+  box-shadow: 0px 4px 4px var(--newsletter-button-shadow-color);
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06rem;
+  cursor: pointer;
 }

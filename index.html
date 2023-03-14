@@ -281,6 +281,33 @@
       <button class="close-button" data-modal-close type="button"><svg width="18px" height="18px">
           <use href="images/icons.svg#icon-close-button"></use>
         </svg></button>
+      <div class="order-form-title">Zostaw swoje dane w formularzu poniżej</div>
+      <form class="order-form-fields" name="order_form" autocomplete="on">
+        <label for="name">Imię</label>
+        <div class="field"><svg class="form-icon" width="18px" height="18px">
+            <use href="images/icons.svg#icon-person"></use>
+          </svg>
+          <input class="input-field" type="text" name="name" id="name" required>
+        </div>
+        <label for="tel_number">Telefon</label>
+        <div class="field"><svg class="form-icon" width="18px" height="18px">
+            <use href="images/icons.svg#icon-phone"></use>
+          </svg>
+          <input class="input-field" type="tel" name="tel_number" id="tel_number" required>
+        </div>
+        <label for="email">Email</label>
+        <div class="field"><svg class="form-icon" width="18px" height="18px">
+            <use href="images/icons.svg#icon-email"></use>
+          </svg>
+          <input class="input-field" type="email" name="email" id="email" required>
+        </div>
+        <label for="feedback">Komentarz</label>
+        <textarea name="feedback" id="feedback" placeholder="Wprowadź tekst"></textarea>
+        <label for="approval">Oświadczam iż akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę
+            Prywatności</a>.</label>
+        <input type="checkbox" name="approval" id="approval" required>
+        <button class="order-form-button" type="submit">Wyślij</button>
+      </form>
     </div>
   </div>
   <script src=" ./js/modal.js">
